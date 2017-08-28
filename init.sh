@@ -17,7 +17,7 @@ if [ ! -d "$2" ];then
     mkdir "$2"
 fi
 
-cp -r ./src/ "$2"
+cp -r ./src "$2"
 cp -r ./test/ "$2"
 cp ./.babelrc "$2"
 cp ./.eslintrc "$2"
