@@ -1,12 +1,12 @@
 {
   "name": "react-component-starter",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "jest --verbose",
     "dev": "export NODE_ENV=development && webpack-dev-server --host 0.0.0.0 --inline --progress --colors --port 3000 --content-base src/",
-    "build": "./build",
+    "build": "./build.sh",
     "publish": "npm publish --access public",
     "win-dev": "set NODE_ENV=development&&webpack-dev-server --host 0.0.0.0 --inline --progress --colors --port 3000 --content-base src/",
     "win-build": "set NODE_ENV=production&&webpack --progress --profile --colors"
@@ -41,6 +41,7 @@
     "eslint-plugin-react": "^4.3.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
+    "fs-extra": "^4.0.1",
     "html-webpack-plugin": "^2.15.0",
     "image-webpack-loader": "^1.7.0",
     "jest": "^20.0.4",
@@ -51,13 +52,14 @@
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "^1.12.14",
-    "webpack-dev-server": "^1.14.1"
+    "webpack-dev-server": "^1.14.1",
+    "yargs": "^8.0.2"
   },
-  "peerDependencies": {
-    "prop-types": ">=15.5.10",
-    "react": ">=15.6.1",
-    "react-dom": ">=15.6.1",
-    "classnames": ">=2.2.4",
-    "axios": ">=0.16.2"
+  "dependencies": {
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "classnames": "^2.2.4",
+    "immutability-helper": "^2.3.1"
   }
 }
