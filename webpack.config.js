@@ -25,19 +25,10 @@ else {
 }
 
 var plugins = [
-	//package vendor libs
-	// new webpack.optimize.CommonsChunkPlugin("vendor", "vendor.bundle.js")
 	new webpack.optimize.CommonsChunkPlugin({
 		name:"vendor"
 		,filename:"vendor.bundle.js"
 	})
-	//global module
-	// , new webpack.ProvidePlugin({
-	// 	React: 'react'
-	// 	, ReactDOM: "react-dom"
-	// 	, classNames: "classnames"
-	// 	, ReactCSSTransitionGroup: "react-addons-css-transition-group"
-	// })
 	//clean dist
 	, new CleanWebpackPlugin(['dist'], {
 		root: __dirname,
@@ -69,13 +60,7 @@ else {
 
 module.exports = {
 	entry: {
-		index: "./src/app.js",
-		vendor: [
-			"babel-polyfill"
-			, "react"
-			, "react-dom"
-			// , "classnames"
-		]
+		index: "./src/app.js"
 	}
 	, output: output
 	, module: {

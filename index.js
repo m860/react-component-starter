@@ -1,3 +1,1 @@
-module.exports={
-	FileButton:require('./components/FileButton.js').default
-};
+module.exports=require('./components/TestComponent.js').default
