@@ -41,6 +41,7 @@ module.exports = function (env) {
 				]
 			}
 		})
+		, new webpack.HotModuleReplacementPlugin()
 	];
 	if (isProduction) {
 		plugins.push(new webpack.optimize.UglifyJsPlugin({
@@ -72,8 +73,8 @@ module.exports = function (env) {
 			}, {
 				test: /\.sass$/,
 				use: ExtractTextPlugin.extract({
-					fallback:"style-loader",
-					use:[
+					fallback: "style-loader",
+					use: [
 						"css-loader",
 						"postcss-loader",
 						"sass-loader"
