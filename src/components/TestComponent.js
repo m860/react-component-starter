@@ -1,7 +1,6 @@
-import React from "react";
-import BaseComponent from './BaseComponent'
+import React,{PureComponent} from "react";
 
-export default class TestComponent extends BaseComponent {
+export default class TestComponent extends PureComponent {
 	render() {
 		return (
 			<p>hello test component!</p>

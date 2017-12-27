@@ -2,8 +2,11 @@
  * Created by jean.h.ma on 10/08/2017.
  */
 import React from "react";
-import {mount} from "enzyme";
+import {mount,configure} from "enzyme";
 import TestComponent from '../src/components/TestComponent'
+import Adapter from 'enzyme-adapter-react-16';
+
+configure({ adapter: new Adapter() });
 
 describe("render `<TestComponent/>` ", ()=> {
 	const wrapper = mount((
