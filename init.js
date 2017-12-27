@@ -30,6 +30,8 @@ console.log('copying .gitignore')
 fsExtra.copySync(path.join(__dirname, '.gitignore'), path.join(targetFolder, '.gitignore'), {overwrite: true});
 console.log('copying .babelrc')
 fsExtra.copySync(path.join(__dirname, '.babelrc'), path.join(targetFolder, '.babelrc'), {overwrite: true});
+fsExtra.copySync(path.join(__dirname, '.browserslistrc'), path.join(targetFolder, '.browserslistrc'), {overwrite: true});
+fsExtra.copySync(path.join(__dirname, 'postcss.config.js'), path.join(targetFolder, 'postcss.config.js'), {overwrite: true});
 console.log('copying .eslintrc')
 fsExtra.copySync(path.join(__dirname, '.eslintrc'), path.join(targetFolder, '.eslintrc'), {overwrite: true});
 console.log('copying package.json')
